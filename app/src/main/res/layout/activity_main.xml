@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cardview_dark_background"
+    android:gravity="center"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imagetop"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:background="@color/white"
+        android:layout_marginBottom="10dp"
+        android:src="@drawable/speech" />
+
+        <LinearLayout
+            android:layout_below="@+id/imagetop"
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="500dp"
+            android:padding="30dp"
+            android:orientation="vertical">
+    <TextView
+        android:text="@string/text1"
+        android:layout_marginTop="16dp"
+        android:textSize="24dp"
+        android:textStyle="bold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+            <EditText
+                android:id="@+id/edittext1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:autofillHints="hello" />
+
+            <LinearLayout
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:layout_marginBottom="20dp"
+        android:layout_width="300dp"
+        android:layout_height="30dp">
+        <TextView
+            android:textSize="20dp"
+            android:text="speed"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+                <SeekBar android:id="@+id/speedx"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:background="#34A853"
+                    android:progress="50" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="30dp">
+                <TextView
+                    android:textSize="20dp"
+                    android:text="pitch"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    />
+                <SeekBar
+                    android:id="@+id/pitchx"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:progress="50"
+                    />
+            </LinearLayout>
+
+        </LinearLayout>
+    <Button
+        android:id="@+id/btnspeak"
+        android:layout_alignParentBottom="true"
+        android:foregroundGravity="center"
+        android:text="speak"
+        android:drawableLeft="@drawable/baseline_volume_down_24"
+        android:layout_centerHorizontal="true"
+        android:layout_width="200dp"
+        android:background="#FF018786"
+        android:layout_height="wrap_content"/>
+
+</RelativeLayout>
