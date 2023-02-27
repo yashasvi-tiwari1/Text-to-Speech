@@ -6,17 +6,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/cardview_dark_background"
-    android:gravity="center"
     tools:context=".MainActivity">
 
     <ImageView
         android:id="@+id/imagetop"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:background="@color/white"
-        android:layout_marginBottom="10dp"
+        android:paddingTop="20dp"
         android:src="@drawable/speech" />
 
         <LinearLayout
@@ -26,20 +25,17 @@
             android:layout_height="500dp"
             android:padding="30dp"
             android:orientation="vertical">
-    <TextView
-        android:text="@string/text1"
-        android:layout_marginTop="16dp"
-        android:textSize="24dp"
-        android:textStyle="bold"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+
 
             <EditText
                 android:id="@+id/edittext1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
-                android:autofillHints="hello" />
+                android:hint="Enter Your Text"
+                android:textSize="25dp"
+                android:textStyle="bold"
+                />
 
             <LinearLayout
         android:gravity="center_vertical"
@@ -50,13 +46,17 @@
         <TextView
             android:textSize="20dp"
             android:text="speed"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             />
-                <SeekBar android:id="@+id/speedx"
+
+                <SeekBar
+                    android:id="@+id/speedx"
                     android:layout_width="200dp"
                     android:layout_height="wrap_content"
-                    android:background="#34A853"
+                    android:indeterminate="false"
+                    android:max="100"
                     android:progress="50" />
 
             </LinearLayout>
@@ -68,14 +68,17 @@
                 <TextView
                     android:textSize="20dp"
                     android:text="pitch"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:textStyle="bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     />
                 <SeekBar
                     android:id="@+id/pitchx"
                     android:layout_width="200dp"
                     android:layout_height="wrap_content"
+                    android:indeterminate="false"
                     android:progress="50"
+
                     />
             </LinearLayout>
 
@@ -85,10 +88,11 @@
         android:layout_alignParentBottom="true"
         android:foregroundGravity="center"
         android:text="speak"
+        android:textSize="50dp"
         android:drawableLeft="@drawable/baseline_volume_down_24"
         android:layout_centerHorizontal="true"
-        android:layout_width="200dp"
+        android:layout_width="match_parent"
         android:background="#FF018786"
-        android:layout_height="wrap_content"/>
+        android:layout_height="120dp"/>
 
 </RelativeLayout>

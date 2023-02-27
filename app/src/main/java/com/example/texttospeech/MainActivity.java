@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.speech.tts.TextToSpeech;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -37,9 +38,10 @@ public class MainActivity extends AppCompatActivity {
                 if (status == TextToSpeech.SUCCESS){
                     int output = tts.setLanguage(Locale.ENGLISH);
                     if(output == TextToSpeech.LANG_MISSING_DATA|| output == TextToSpeech.LANG_NOT_SUPPORTED){
-                        Toast.makeText(getApplicationContext(), "Error not supported", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(), "Welcome to Text-to-Speech", Toast.LENGTH_SHORT).show();
                     }else {
-                        Toast.makeText(getApplicationContext(), "Error not supported", Toast.LENGTH_SHORT).show();
+
+                        Toast.makeText(getApplicationContext(), "Welcome to Text-to-Speech", Toast.LENGTH_SHORT).show();
                     }
                 }
 
@@ -56,7 +58,15 @@ public class MainActivity extends AppCompatActivity {
     }
     private void Speak() {
         //set speak items
-        String speakText = editText.getText().toString();//convert our typed text to speech
+        String speakText = editText.getText().toString();
+
+
+        if (speakText.isEmpty()){
+
+            speakText="Enter a text to speak";
+        }
+
+        //convert our typed text to speech
         //set seekbar by default to 50
 
         float pitchn = (float) pitchx.getProgress()/50;
