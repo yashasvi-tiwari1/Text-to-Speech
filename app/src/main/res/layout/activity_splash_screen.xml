@@ -25,7 +25,7 @@
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
             android:layout_marginVertical="130dp"
-            android:layout_marginLeft="40dp"
+            android:layout_marginLeft="44dp"
             />
         <TextView
             android:layout_width="400dp"
@@ -33,6 +33,7 @@
             android:text="Build by Yashasvi Tiwari @2023 "
             android:textColor="@color/white"
             android:textSize="20dp"
+            android:layout_marginLeft="20dp"
             android:textStyle="bold"
             tools:layout_editor_absoluteX="23dp"
             tools:layout_editor_absoluteY="639dp" />
